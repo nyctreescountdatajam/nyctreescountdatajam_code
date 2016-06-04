@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy  as np
 from nyc_geoclient import Geoclient
 import csv
 import time
@@ -17,7 +18,8 @@ wo = wd+'output/'
 wp = wd+'processing/'
 
 treeYears = ['nyctrees1995','nyctrees2005','nyctrees2015']
-#treeYears = ['nyctrees1995']
+#treeYears = ['nyctrees2015']
+#treeYears = ['nyctrees1995','nyctrees2005']
 
 def getBoroCode(bName):
 	try:
