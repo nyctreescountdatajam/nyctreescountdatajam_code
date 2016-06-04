@@ -11,5 +11,11 @@ print '-------------------------------'
 print df15.head(10)
 print '-------------------------------'
 
-# CensusTract_2010
- 
+df95['uid'] = df95.index 
+df05['uid'] = df05.index
+df15['uid'] = df15.index
+
+df95.to_csv(wp+'/to_cartodb/nyctrees1995.csv', index=False)
+df05.to_csv(wp+'/to_cartodb/nyctrees2005.csv', index=False)
+df15.to_csv(wp+'/to_cartodb/nyctrees2015.csv', index=False)
+

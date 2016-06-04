@@ -16,6 +16,9 @@ wi = wd+'input/'
 wo = wd+'output/'
 wp = wd+'processing/'
 
+treeYears = ['nyctrees1995','nyctrees2005','nyctrees2015']
+#treeYears = ['nyctrees1995']
+
 def getBoroCode(bName):
 	try:
 		bName = bName.lower().replace('the','').replace(' ','')
