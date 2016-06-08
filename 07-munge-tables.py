@@ -27,9 +27,9 @@ df = df95g.merge(df05g, on='bctcb2010', how='outer').merge(df15g, on='bctcb2010'
 
 df = df.fillna(0)
 
-df['pctchange95_05'] = (df['count2005'] - df['count1995']) / df['count1995']
-df['pctchange05_15'] = (df['count2015'] - df['count2005']) / df['count2005']
-df['pctchange95_15'] = (df['count2015'] - df['count1995']) / df['count2015']
+df['pctchange9505cnt'] = ((df['count2005'] - df['count1995']) / df['count1995'] ) * 100
+df['pctchange0515cnt'] = ((df['count2015'] - df['count2005']) / df['count2005'] ) * 100 
+df['pctchange9515cnt'] = ((df['count2015'] - df['count1995']) / df['count1995'] ) * 100 
 
 df = df.replace([np.inf, -np.inf], np.nan)
 df = df.fillna(0)
@@ -49,9 +49,9 @@ df['treedensqmi1995'] = df['count1995'] / df['cbareasqmi']
 df['treedensqmi2005'] = df['count2005'] / df['cbareasqmi']
 df['treedensqmi2015'] = df['count2015'] / df['cbareasqmi']
 
-df['pctchange95_05trdn'] = (df['treedensqmi2005'] - df['treedensqmi1995']) / df['treedensqmi1995']
-df['pctchange05_15trdn'] = (df['treedensqmi2015'] - df['treedensqmi2005']) / df['treedensqmi2005']
-df['pctchange95_15trdn'] = (df['treedensqmi2015'] - df['treedensqmi1995']) / df['treedensqmi1995']
+df['pctchange9505den'] = ((df['treedensqmi2005'] - df['treedensqmi1995']) / df['treedensqmi1995'] ) * 100 
+df['pctchange0515den'] = ((df['treedensqmi2015'] - df['treedensqmi2005']) / df['treedensqmi2005'] ) * 100 
+df['pctchange9515den'] = ((df['treedensqmi2015'] - df['treedensqmi1995']) / df['treedensqmi1995'] ) * 100 
 
 df['bctcb2010'] = df['bctcb2010'].astype(int)
 
