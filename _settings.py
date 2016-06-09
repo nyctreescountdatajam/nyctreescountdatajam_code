@@ -18,29 +18,3 @@ wo = wd+'output/'
 wp = wd+'processing/'
 
 treeYears = ['nyctrees1995','nyctrees2005','nyctrees2015']
-#treeYears = ['nyctrees2015']
-#treeYears = ['nyctrees1995','nyctrees2005']
-
-def getBoroCode(bName):
-	try:
-		bName = bName.lower().replace('the','').replace(' ','')
-		if bName.isdigit():
-			return bName
-		elif bName == 'manhattan':
-			return '1'
-		elif bName == 'newyork':
-			return '1'
-		elif bName == 'bronx':
-			return '2'
-		elif bName == 'kings':
-			return '3'
-		elif bName == 'brooklyn':
-			return '3'
-		elif bName == 'statenisland':
-			return '5'
-		elif bName == 'richmond':
-			return '5'
-		else:
-			return '4'
-	except:
-		return bName
