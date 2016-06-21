@@ -1,6 +1,6 @@
 ## 00 
 
-Welcome to my project on the NYC Street Tree Census Trees Count Data Jam Challenge
+Welcome to my project on the NYC Street Tree Census   Data Jam Challenge
 
 Here is a quick overview of the websit I created using some basic data analysis, the CartoDB platform, to create a mapping portal dropdowns for different thematic maps, and data download. 
 
@@ -30,7 +30,9 @@ I read and saved my data in pandas to explore the variables.
 
 Then I imported the CSV files into CartoDB using the import API. 
 
-Then I intersected the Street trees for each census with NYC Census Blocks 2010. Again, using the CartoDB python client. Then CartoDBifyied the tables and used the CartoDB SQL API to read the output right into a pandas dataframe. 
+Then I intersected the Street trees for each census with NYC Census Blocks 2010. Again, using the CartoDB python client. 
+
+Then CartoDBifyied the tables and used the CartoDB SQL API to read the output right into a pandas dataframe. 
 
 Next, I just quickly grabbed the NYC census block data clipped to shoreline to get shape area in square feet, for NYC's local state plane long island projection system, using dbfpy python module to convert the dbf to a csv adn then did soem data carpentry in pandas to join the data on the census block id, create some percent change metrics and street tree density per sq mile.
 
